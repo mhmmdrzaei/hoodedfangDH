@@ -1940,8 +1940,8 @@ html[data-useragent*="MSIE 10.0"] .plSel:hover { background-color: rgba(255, 255
 
 /* IE 11 */
 html[data-useragent*="rv:11.0"] audio { margin-left:2px; width:695px; }
-html[data-useragent*="rv:11.0"] #audiowrap { background-color:#000; }
-html[data-useragent*="rv:11.0"] a[id^="btn"] { background-color:#000; }
+html[data-useragent*="rv:11.0"] #audiowrap { background-color:rgba(255, 255, 255, 0.3); }
+html[data-useragent*="rv:11.0"] a[id^="btn"] { background-color:rgba(255, 255, 255, 0.3); }
 html[data-useragent*="rv:11.0"] a[id^="btn"]:hover { background-color:none; }
 html[data-useragent*="rv:11.0"] #plList li { background-color:none; }
 html[data-useragent*="rv:11.0"] #plList li:hover { background-color:none; }
@@ -1950,9 +1950,9 @@ html[data-useragent*="rv:11.0"] .plSel:hover { background-color:none !important;
 
 /* All Apple Products */
 html[data-useragent*="Apple"] audio { margin:0; width:100%; }
-html[data-useragent*="Apple"] #audiowrap { background-color:#000; }
-html[data-useragent*="Apple"] a[id^="btn"] { background-color:#000; }
-html[data-useragent*="Apple"] a[id^="btn"]:hover { background-color:#080808; }
+html[data-useragent*="Apple"] #audiowrap { background-color:rgba(255, 255, 255, 0.3); }
+html[data-useragent*="Apple"] a[id^="btn"] { background-color:rgba(255, 255, 255, 0.3); }
+html[data-useragent*="Apple"] a[id^="btn"]:hover { background-color:rgba(255, 255, 255, 0.3); }
 html[data-useragent*="Apple"] #plList li { background-color:none; }
 html[data-useragent*="Apple"] #plList li:hover { background-color:none; }
 html[data-useragent*="Apple"] .plSel,
@@ -1961,10 +1961,10 @@ html[data-useragent*="Apple"] .plSel:hover { background-color:#none!important; }
 /* IOS 7 */
 html[data-useragent*="OS 7"] body { color:#373837; }
 html[data-useragent*="OS 7"] audio { margin-left:3px; width:690px; }
-// html[data-useragent*="OS 7"] #audiowrap { background-color:#c1c1c1; }
+html[data-useragent*="OS 7"] #audiowrap { background-color:#c1c1c1; }
 html[data-useragent*="OS 7"] a[id^="btn"] { background-color:#c1c1c1; color:#373837; }
 html[data-useragent*="OS 7"] a[id^="btn"]:hover { background-color:#c1c1c1; }
-// html[data-useragent*="OS 7"] #plList li { background-color:#e6e6e6; }
+html[data-useragent*="OS 7"] #plList li { background-color:#e6e6e6; }
 html[data-useragent*="OS 7"] #plList li:hover { background-color:#c1c1c1; }
 html[data-useragent*="OS 7"] .plSel,
 html[data-useragent*="OS 7"] .plSel:hover { background-color:#c1c1c1!important; }
@@ -2173,8 +2173,19 @@ html[data-useragent*="Chrome"][data-useragent*="Mobile"] audio { margin-left:4px
 		}
 	}
 }
-@media (max-width: 365px){
+
+@media (max-width: 465px){
+	#plwrap {
+		background-color: rgba(25, 255, 255, 0.3);
+	}
+
+	.makeItRain {
+		display: none;
+	}
 	.main {
+		background-color: none;
+
+		border: none;
 		.side {
 			.purchaseRecord {
 				margin: 20px auto;

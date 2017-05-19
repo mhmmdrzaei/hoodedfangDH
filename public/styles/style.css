@@ -1861,10 +1861,10 @@ html[data-useragent*="rv:11.0"] audio {
   width: 695px; }
 
 html[data-useragent*="rv:11.0"] #audiowrap {
-  background-color: #000; }
+  background-color: rgba(255, 255, 255, 0.3); }
 
 html[data-useragent*="rv:11.0"] a[id^="btn"] {
-  background-color: #000; }
+  background-color: rgba(255, 255, 255, 0.3); }
 
 html[data-useragent*="rv:11.0"] a[id^="btn"]:hover {
   background-color: none; }
@@ -1885,13 +1885,13 @@ html[data-useragent*="Apple"] audio {
   width: 100%; }
 
 html[data-useragent*="Apple"] #audiowrap {
-  background-color: #000; }
+  background-color: rgba(255, 255, 255, 0.3); }
 
 html[data-useragent*="Apple"] a[id^="btn"] {
-  background-color: #000; }
+  background-color: rgba(255, 255, 255, 0.3); }
 
 html[data-useragent*="Apple"] a[id^="btn"]:hover {
-  background-color: #080808; }
+  background-color: rgba(255, 255, 255, 0.3); }
 
 html[data-useragent*="Apple"] #plList li {
   background-color: none; }
@@ -1911,12 +1911,18 @@ html[data-useragent*="OS 7"] audio {
   margin-left: 3px;
   width: 690px; }
 
+html[data-useragent*="OS 7"] #audiowrap {
+  background-color: #c1c1c1; }
+
 html[data-useragent*="OS 7"] a[id^="btn"] {
   background-color: #c1c1c1;
   color: #373837; }
 
 html[data-useragent*="OS 7"] a[id^="btn"]:hover {
   background-color: #c1c1c1; }
+
+html[data-useragent*="OS 7"] #plList li {
+  background-color: #e6e6e6; }
 
 html[data-useragent*="OS 7"] #plList li:hover {
   background-color: #c1c1c1; }
@@ -2204,15 +2210,22 @@ html[data-useragent*="Chrome"][data-useragent*="Android"] .plSel:hover {
         margin: 0 auto;
         margin-top: 0; } }
 
-@media (max-width: 365px) {
-  .main .side .purchaseRecord {
-    margin: 20px auto; }
-  .main .side .svg {
-    position: relative;
-    left: 20px; }
-  .main .container {
-    width: 100%; }
-  .main audio {
-    width: 94%; } }
+@media (max-width: 465px) {
+  #plwrap {
+    background-color: rgba(25, 255, 255, 0.3); }
+  .makeItRain {
+    display: none; }
+  .main {
+    background-color: none;
+    border: none; }
+    .main .side .purchaseRecord {
+      margin: 20px auto; }
+    .main .side .svg {
+      position: relative;
+      left: 20px; }
+    .main .container {
+      width: 100%; }
+    .main audio {
+      width: 94%; } }
 
 /*# sourceMappingURL=style.css.map */
