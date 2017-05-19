@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hooded Fang: Dynasty House</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="styles/style.css"> 
+	<script src="http://thecodeplayer.com/uploads/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+	<script src="scripts/main.js"></script>
+
+
+
+</head>
+<body>
+
+	<div class="main">
+		<div class="side">
+			<div class="svg">
+			<!-- http://bl.ocks.org/jebeck/raw/196406a3486985d2b92e/ -->
+			<!-- http://complexdan.com/svg-circleellipse-to-path-converter -->
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 500 500">
+				  <defs>
+				    <!-- The text path: see links above regarding coordinate system -->
+				    <path d="M0, 200a200, 200 0 1, 0 400, 0a200, 200 0 1, 0 -400, 0" id="txt-path"></path>
+				  </defs>
+
+				  <text fill="#D54E02" font-size="45" font-family="Helvetica Neue" font-weight="600">
+				    <!-- This is the magic -->
+				    <textPath startOffset="0" xlink:href="#txt-path">HOODED FANG _________ DYNASTY HOUSE ____________ </textPath>
+				  </text>
+				</svg>
+			</div>
+			<div class="socialMedia">
+				
+			</div>
+			<div class="purchaseRecord">
+				
+			</div>
+			<div class="makeItRain">
+				
+			</div>
+		</div>
+		<div class="player">
+			<div class="container">
+			    <div class="column add-bottom">
+			        <div id="mainwrap">
+			            <div id="nowPlay">
+			                <span class="left" id="npAction">Paused...</span>
+			                <span class="right" id="npTitle"></span>
+			            </div>
+			            <div id="audiowrap">
+			                <div id="audio0">
+			                    <audio preload id="audio1" controls="controls">Your browser does not support HTML5 Audio!</audio>
+			                </div>
+			                <div id="tracks">
+			                    <a id="btnPrev">&laquo;</a>
+			                    <a id="btnNext">&raquo;</a>
+			                </div>
+			            </div>
+			            <div id="plwrap">
+			                <ul id="plList"></ul>
+			            </div>
+			        </div>
+			    </div>
+			
+		</div>
+
+	</div>
+
+
+
+
+</body>
+</html>

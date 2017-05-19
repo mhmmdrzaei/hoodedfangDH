@@ -1,0 +1,68 @@
+$total: 100;
+
+html, body, .wrap {
+	height: 100%;
+}
+
+body {
+	overflow: hidden;
+	background: black;
+}
+
+.wrap {
+	transform-style: preserve-3d;
+	perspective: 800px;
+	perspective-origin: center top;
+}
+
+.dolla {
+	width: 140px;
+	height: 60px;
+	position: absolute;
+	transform-style: preserve-3d;
+	animation: random 2s infinite alternate;
+	
+	.inside {
+		width: 100%;
+		height: 100%;
+		display: block;
+		transform-style: preserve-3d;
+	}
+	
+	.front, .back {
+		width: inherit;
+		height: inherit;
+		position: absolute;
+		backface-visibility: hidden;
+		background-image: url(http://ak-hdl.buzzfed.com/static/enhanced/webdr02/2013/4/24/17/enhanced-buzz-4819-1366837540-8.jpg);
+		background-size: 140px;
+		
+	}
+	
+	.back {
+		transform: rotateY(-180deg);
+		background-position: 0 -179px;
+	}
+}
+
+@for $i from 1 through $total {
+	$xDeg: random(100, 540) * 1deg;
+	$yDeg: random(100, 540) * 1deg;
+	$z: random(0, 600) * -1px;
+	.dolla:nth-child(#{$i}){
+		top: -100px;
+		left: (random(100) * 1vw) - 2vw;
+		animation: rain#{$i} 10s infinite;
+		animation-delay: $i * -.2s;
+		transform: translate3d(0,0, $z) rotateY($yDeg) rotateX($xDeg) rotate(0);
+	}
+	@keyframes rain#{$i} {
+		80% {
+			opacity: 1;
+		}
+		100% {
+			transform: translate3d(0,180vh, $z) rotateY(random(100, 200) + $yDeg) rotateX(random(10, 300) + $xDeg) rotate(random(10, 300) * 1deg);
+			opacity: 0;
+		}
+	}
+}
