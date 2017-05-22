@@ -2005,9 +2005,9 @@ html[data-useragent*="Chrome"] .plSel:hover { background-color:#c1c1c1!important
 /* Chrome / Android / Tablet */
 html[data-useragent*="Chrome"][data-useragent*="Android"] body { color:#373837; }
 html[data-useragent*="Chrome"][data-useragent*="Android"] audio { margin-left:4px; width:689px; }
-html[data-useragent*="Chrome"][data-useragent*="Android"] #audiowrap { background-color:#fafafa; }
-html[data-useragent*="Chrome"][data-useragent*="Android"] a[id^="btn"] { background-color:#fafafa; color:#373837; }
-html[data-useragent*="Chrome"][data-useragent*="Android"] a[id^="btn"]:hover { background-color:#c1c1c1; }
+html[data-useragent*="Chrome"][data-useragent*="Android"] #audiowrap { background-color:none; }
+html[data-useragent*="Chrome"][data-useragent*="Android"] a[id^="btn"] { background-color:none; color:#373837; }
+html[data-useragent*="Chrome"][data-useragent*="Android"] a[id^="btn"]:hover { background-color:none; }
 html[data-useragent*="Chrome"][data-useragent*="Android"] #plList li { background-color:none; }
 html[data-useragent*="Chrome"][data-useragent*="Android"] #plList li:hover { background-color: rgba(255, 255, 255, 0.3); }
 html[data-useragent*="Chrome"][data-useragent*="Android"] .plSel,
@@ -2046,15 +2046,22 @@ html[data-useragent*="Chrome"][data-useragent*="Mobile"] audio { margin-left:4px
 
 /* Mobile Portrait */
 @media only screen and (max-width: 479px) {
-audio { width:270px; }
-html[data-useragent*="MSIE 9.0"] audio { width:280px; }
-html[data-useragent*="MSIE 10.0"] audio { width:287px; }
-html[data-useragent*="rv:11.0"] audio { width:295px; }
-html[data-useragent*="OS 7"] audio { width:290px; }
-html[data-useragent*="OS 8"] audio { width:294px; }
-html[data-useragent*="OS 9"] audio { width:294px; }
-html[data-useragent*="Chrome"] audio { width:277px; }
-html[data-useragent*="Chrome"][data-useragent*="Mobile"] audio { margin-left:4px; width:290px; }
+audio { width: 100%; margin: 0 auto; }
+html[data-useragent*="MSIE 9.0"] audio { margin: 0px auto;
+    width: 100%; }
+html[data-useragent*="MSIE 10.0"] audio { margin: 0px auto;
+    width: 100%; }
+html[data-useragent*="rv:11.0"] audio { margin: 0px auto;
+    width: 100%; }
+html[data-useragent*="OS 7"] audio { margin: 0px auto;
+    width: 100%; }
+html[data-useragent*="OS 8"] audio { margin: 0px auto;
+    width: 100%; }
+html[data-useragent*="OS 9"] audio { margin: 0px auto;
+    width: 100%; }
+html[data-useragent*="Chrome"] audio { margin: 0px auto;
+    width: 100%; }
+html[data-useragent*="Chrome"][data-useragent*="Mobile"] audio { margin: 0px auto; width: 100%; }
 #npTitle { width:167px; }
 }
 //video 
@@ -2090,10 +2097,26 @@ html[data-useragent*="Chrome"][data-useragent*="Mobile"] audio { margin-left:4px
   }
 }
 
-@media (max-width: 800px) {
-  .fullscreen-bg {
-    background: url('../assets/one.png') center center / cover no-repeat;
-  }
+@media (max-width: 600px) {
+
+	#numb01 {
+		background: url('../assets/one.png') center center / cover no-repeat;
+	}
+	#numb02 {
+		background: url('../assets/two.png') center center / cover no-repeat;
+	}
+	#numb03 {
+		background: url('../assets/three.png') center center / cover no-repeat;
+	}
+	#numb04 {
+		background: url('../assets/four.png') center center / cover no-repeat;
+	}
+	#numb05 {
+		background: url('../assets/five.png') center center / cover no-repeat;
+	}
+	#numb06 {
+		background: url('../assets/six.png') center center / cover no-repeat;
+	}
 
   .fullscreen-bg__video {
     display: none;
@@ -2109,7 +2132,7 @@ html[data-useragent*="Chrome"][data-useragent*="Mobile"] audio { margin-left:4px
 	@extend .flex;
 	z-index: 9;
 	background-color: rgba(25, 255, 255, 0.3);
-	padding: 18px;
+	padding: 25px 15px;
 	border: 5px solid white;
 }
 .container {
@@ -2131,7 +2154,7 @@ html[data-useragent*="Chrome"][data-useragent*="Mobile"] audio { margin-left:4px
 		text-decoration: none;
 		color: white;
 		font-weight: bold;
-		font-size: 37px;
+		font-size: 30px;
 		border: 5px solid white;
 		padding: 2px 11px;
 		&:hover {
@@ -2150,8 +2173,10 @@ html[data-useragent*="Chrome"][data-useragent*="Mobile"] audio { margin-left:4px
 	.main {
 		width: 96%;
 		margin: 0 auto;
+
+		// min-height: 840px;
 		.player {
-			margin: 0 auto;
+			margin: 25px auto;
 			width: 100%;
 		}
 		.svg, .socialMedia {
@@ -2173,22 +2198,30 @@ html[data-useragent*="Chrome"][data-useragent*="Mobile"] audio { margin-left:4px
 		}
 	}
 }
+@media (max-width: 700px){
+	.makeItRain {
+		display: none;
+	}
+	.main {
+		border: none;
+		background-color: transparent;
+	}
+}
 
 @media (max-width: 465px){
 	#plwrap {
 		background-color: rgba(25, 255, 255, 0.3);
 	}
 
-	.makeItRain {
-		display: none;
-	}
+	
 	.main {
 		background-color: none;
+		// min-height: 1500px;
 
-		border: none;
+		// border: none;
 		.side {
-			.purchaseRecord {
-				margin: 20px auto;
+			.purchaseRecord, .socialMedia {
+				margin: 30px auto 0 auto;
 			}
 			.svg {
 				position: relative;
@@ -2206,3 +2239,7 @@ html[data-useragent*="Chrome"][data-useragent*="Mobile"] audio { margin-left:4px
 }
 
 
+
+.numb > div:not(.nonDisplay) {
+  display: none;
+}

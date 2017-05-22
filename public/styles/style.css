@@ -2024,14 +2024,14 @@ html[data-useragent*="Chrome"][data-useragent*="Android"] audio {
   width: 689px; }
 
 html[data-useragent*="Chrome"][data-useragent*="Android"] #audiowrap {
-  background-color: #fafafa; }
+  background-color: none; }
 
 html[data-useragent*="Chrome"][data-useragent*="Android"] a[id^="btn"] {
-  background-color: #fafafa;
+  background-color: none;
   color: #373837; }
 
 html[data-useragent*="Chrome"][data-useragent*="Android"] a[id^="btn"]:hover {
-  background-color: #c1c1c1; }
+  background-color: none; }
 
 html[data-useragent*="Chrome"][data-useragent*="Android"] #plList li {
   background-color: none; }
@@ -2094,24 +2094,32 @@ html[data-useragent*="Chrome"][data-useragent*="Android"] .plSel:hover {
 /* Mobile Portrait */
 @media only screen and (max-width: 479px) {
   audio {
-    width: 270px; }
+    width: 100%;
+    margin: 0 auto; }
   html[data-useragent*="MSIE 9.0"] audio {
-    width: 280px; }
+    margin: 0px auto;
+    width: 100%; }
   html[data-useragent*="MSIE 10.0"] audio {
-    width: 287px; }
+    margin: 0px auto;
+    width: 100%; }
   html[data-useragent*="rv:11.0"] audio {
-    width: 295px; }
+    margin: 0px auto;
+    width: 100%; }
   html[data-useragent*="OS 7"] audio {
-    width: 290px; }
+    margin: 0px auto;
+    width: 100%; }
   html[data-useragent*="OS 8"] audio {
-    width: 294px; }
+    margin: 0px auto;
+    width: 100%; }
   html[data-useragent*="OS 9"] audio {
-    width: 294px; }
+    margin: 0px auto;
+    width: 100%; }
   html[data-useragent*="Chrome"] audio {
-    width: 277px; }
+    margin: 0px auto;
+    width: 100%; }
   html[data-useragent*="Chrome"][data-useragent*="Mobile"] audio {
-    margin-left: 4px;
-    width: 290px; }
+    margin: 0px auto;
+    width: 100%; }
   #npTitle {
     width: 167px; } }
 
@@ -2141,9 +2149,19 @@ html[data-useragent*="Chrome"][data-useragent*="Android"] .plSel:hover {
     width: 300%;
     left: -100%; } }
 
-@media (max-width: 800px) {
-  .fullscreen-bg {
+@media (max-width: 600px) {
+  #numb01 {
     background: url("../assets/one.png") center center/cover no-repeat; }
+  #numb02 {
+    background: url("../assets/two.png") center center/cover no-repeat; }
+  #numb03 {
+    background: url("../assets/three.png") center center/cover no-repeat; }
+  #numb04 {
+    background: url("../assets/four.png") center center/cover no-repeat; }
+  #numb05 {
+    background: url("../assets/five.png") center center/cover no-repeat; }
+  #numb06 {
+    background: url("../assets/six.png") center center/cover no-repeat; }
   .fullscreen-bg__video {
     display: none; } }
 
@@ -2153,7 +2171,7 @@ html[data-useragent*="Chrome"][data-useragent*="Android"] .plSel:hover {
 .main {
   z-index: 9;
   background-color: rgba(25, 255, 255, 0.3);
-  padding: 18px;
+  padding: 25px 15px;
   border: 5px solid white; }
 
 .container {
@@ -2173,7 +2191,7 @@ html[data-useragent*="Chrome"][data-useragent*="Android"] .plSel:hover {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    font-size: 37px;
+    font-size: 30px;
     border: 5px solid white;
     padding: 2px 11px; }
     .purchaseRecord a:hover {
@@ -2191,7 +2209,7 @@ html[data-useragent*="Chrome"][data-useragent*="Android"] .plSel:hover {
     width: 96%;
     margin: 0 auto; }
     .main .player {
-      margin: 0 auto;
+      margin: 25px auto;
       width: 100%; }
     .main .svg, .main .socialMedia {
       margin: 0 auto; }
@@ -2210,16 +2228,20 @@ html[data-useragent*="Chrome"][data-useragent*="Android"] .plSel:hover {
         margin: 0 auto;
         margin-top: 0; } }
 
-@media (max-width: 465px) {
-  #plwrap {
-    background-color: rgba(25, 255, 255, 0.3); }
+@media (max-width: 700px) {
   .makeItRain {
     display: none; }
   .main {
-    background-color: none;
-    border: none; }
-    .main .side .purchaseRecord {
-      margin: 20px auto; }
+    border: none;
+    background-color: transparent; } }
+
+@media (max-width: 465px) {
+  #plwrap {
+    background-color: rgba(25, 255, 255, 0.3); }
+  .main {
+    background-color: none; }
+    .main .side .purchaseRecord, .main .side .socialMedia {
+      margin: 30px auto 0 auto; }
     .main .side .svg {
       position: relative;
       left: 20px; }
@@ -2227,5 +2249,8 @@ html[data-useragent*="Chrome"][data-useragent*="Android"] .plSel:hover {
       width: 100%; }
     .main audio {
       width: 94%; } }
+
+.numb > div:not(.nonDisplay) {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */

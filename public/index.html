@@ -27,49 +27,53 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="styles/style.css"> 
 	<script src="http://thecodeplayer.com/uploads/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+	<script src="http:////cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js" type="text/javascript"></script>
 	<script src="scripts/main.js"></script>
+	
 
 
 
 </head>
-		<div class="fullscreen-bg">
+
+<body>
+<div class="numb">
+	<div class="fullscreen-bg nonDisplay" id="numb01">
 	    <video loop muted autoplay poster="assets/one.png" class="fullscreen-bg__video">
 	        <source src="assets/one.mp4" type="video/mp4">
 	        <source src="assets/one.ogv" type="video/ogg">
 	    </video>
 	</div>
-
-	<div class="fullscreen-bg two">
+	<div class="fullscreen-bg" id="numb02">
 	    <video loop muted autoplay poster="assets/two.png" class="fullscreen-bg__video">
 	        <source src="assets/two.mp4" type="video/mp4">
 	        <source src="assets/two.ogv" type="video/ogg">
 	    </video>
 	</div>
-	<div class="fullscreen-bg three">
+	<div class="fullscreen-bg" id="numb03">
 	    <video loop muted autoplay poster="assets/three.png" class="fullscreen-bg__video">
 	        <source src="assets/three.mp4" type="video/mp4">
 	        <source src="assets/three.ogv" type="video/ogg">
 	    </video>
 	</div>
-	<div class="fullscreen-bg four">
+	<div class="fullscreen-bg" id="numb04">
 	    <video loop muted autoplay poster="assets/four.png" class="fullscreen-bg__video">
 	        <source src="assets/four.mp4" type="video/mp4">
 	        <source src="assets/four.ogv" type="video/ogg">
 	    </video>
 	</div>
-	<div class="fullscreen-bg five">
+	<div class="fullscreen-bg" id="numb05">
 	    <video loop muted autoplay poster="assets/five.png" class="fullscreen-bg__video">
 	        <source src="assets/five.mp4" type="video/mp4">
 	        <source src="assets/five.ogv" type="video/ogg">
 	    </video>
 	</div>
-	<div class="fullscreen-bg six">
+	<div class="fullscreen-bg" id="numb06">
 	    <video loop muted autoplay poster="assets/six.png" class="fullscreen-bg__video">
 	        <source src="assets/six.mp4" type="video/mp4">
 	        <source src="assets/six.ogv" type="video/ogg">
 	    </video>
 	</div>
-<body>
+</div>
 
 
 	<div class="makeItRain">
@@ -716,7 +720,7 @@
 			            </div>
 			            <div id="audiowrap">
 			                <div id="audio0">
-			                    <audio preload id="audio1" controls="controls" controlsList="nodownload" autoplay="true">Your browser does not support HTML5 Audio!</audio>
+			                    <audio preload id="audio1" controls="controls" controlsList="nodownload" autoplay="true" >Your browser does not support HTML5 Audio!</audio>
 			                </div>
 			                <div id="tracks">
 			                    <a id="btnPrev">&laquo;</a>
